@@ -3,6 +3,7 @@ This package contains an implementation of the defocus segmentation algorithm de
 >Xin Yi, Mark Eramian, *LBP-based segmentation of defocus blur*:
 IEEE transaction on image processing 2016. 
 
+Detals can be found in our [project page](https://www.cs.usask.ca/faculty/eramian/defocusseg/).
 
 The alpha matting code comes from Levin, 2006:
 
@@ -26,8 +27,8 @@ The multi-scale inference code was adopted form Jianping Shi, 2014:
 
 >Jianping Shi, Li Xu, Jiaya Jia. *Discriminative Blur Detection Features*.
 IEEE Conference on Computer Vision and Pattern Recognition, 2014. 
-You can also download it from its [project page](http://www.cse.cuhk.edu.hk/~leojia/projects/dblurdetect/index.html).
 
+You can also download it from its [project page](http://www.cse.cuhk.edu.hk/~leojia/projects/dblurdetect/index.html).
 Note that the code to create adjancent matrix was modified to remove the boundary effect.
 Please see demo.m for an example implementation of how to use the
 provided functions. 
