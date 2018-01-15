@@ -1,3 +1,7 @@
+### Update:
+The blur maps for the 1000 images in the [blur segmentation dataset](http://www.cse.cuhk.edu.hk/%7Eleojia/projects/dblurdetect/dataset.html) produced by our algorithm can be found [here](https://1drv.ms/u/s!Aj4IQl4ug0_9hEANDaY7WjuOQkxW) for easy comparison.
+
+### Get the code
 This package contains an implementation of the defocus segmentation algorithm described in the paper:
 
 >Xin Yi, Mark Eramian, *LBP-based segmentation of defocus blur*:
@@ -34,7 +38,7 @@ Please see demo.m for an example implementation of how to use the
 provided functions. 
 
 
-## How to
+### How to
 Compute the LBP-based sharpness measure using the mex version.
 
 1. Install [mexopencv](https://github.com/kyamagu/mexopencv)
