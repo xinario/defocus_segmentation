@@ -1,44 +1,28 @@
-### Update:
+# LBP-Based Segmentation of Defocus Blur
+
+## Update:
 The blur maps for the 1000 images in the [blur segmentation dataset](http://www.cse.cuhk.edu.hk/%7Eleojia/projects/dblurdetect/dataset.html) produced by our algorithm can be found [here](https://1drv.ms/u/s!Aj4IQl4ug0_9hEANDaY7WjuOQkxW) for easy comparison.
 
-### Get the code
-This package contains an implementation of the defocus segmentation algorithm described in the paper:
+##
+This repo provides the code to reproduce our defocus segmentaion results  in our [paper](https://ieeexplore.ieee.org/abstract/document/7403985/).
+<img src="./images/figure1.png" width="900px"/>
 
->Xin Yi, Mark Eramian, *LBP-based segmentation of defocus blur*:
-IEEE transaction on image processing 2016. 
+## How to use
 
-Detals can be found in our [project page](https://www.cs.usask.ca/faculty/eramian/defocusseg/).
+### Prerequistites
+- Matlab 2016a
 
-The alpha matting code comes from Levin, 2006:
+### Getting Started
+- Clone this repo:
+```bash
+git clone git@github.com:xinario/defocus_segmentation.git
+```
 
->A. Levin D. Lischinski and Y. Weiss. *A Closed Form Solution to Natural Image Matting*. 
-IEEE Conf. on Computer Vision and Pattern Recognition (CVPR), June 2006, New York.
+- In Matlab, change your project directiory to <your download path\>/defocus_segmentation then run demo.m
 
-Please download it from its [project page](http://www.wisdom.weizmann.ac.il/~levina/matting.tar.gz).
-Once you have downloaded the matting code, copy the following functions into the project folder
+- Note that matlab implementation was used by default to compute the proposed sharpness metric. But you can also switch to .mex code to gain some speed boost. The sharpness metric implementation in .mex code was based on integral image and can run in real time on a single core cpu.
 
-- downSmpIm.m
-- getLaplacian1.m
-- getLinearCoeff.m
-- solveAlpha.m
-- solveAlphaC2F.m
-- upSampleAlphaUsingImg.m
-- upSmpIm.m
-
-
-
-The multi-scale inference code was adopted form Jianping Shi, 2014:
-
->Jianping Shi, Li Xu, Jiaya Jia. *Discriminative Blur Detection Features*.
-IEEE Conference on Computer Vision and Pattern Recognition, 2014. 
-
-You can also download it from its [project page](http://www.cse.cuhk.edu.hk/~leojia/projects/dblurdetect/index.html).
-Note that the code to create adjancent matrix was modified to remove the boundary effect.
-Please see demo.m for an example implementation of how to use the
-provided functions. 
-
-
-### How to
+```
 Compute the LBP-based sharpness measure using the mex version.
 
 1. Install [mexopencv](https://github.com/kyamagu/mexopencv)
@@ -49,18 +33,24 @@ Compute the LBP-based sharpness measure using the mex version.
 
 4. Comment out line 14 and uncomment line 18, 19 in localSharpScoreLBP.m, then you are good to go.
 
-Note that all the results reported in the paper were produced by the mex verison of LBP-based sharpness.
+All the results reported in the paper were produced by the mex verison of LBP-based sharpness.
+```
 
+### Citations
+If you find it useful and are using the code/model/dataset provided here in a publication, please cite our paper:
 
-This code is released only for non-commercial research
-use. Please cite the above paper if you use this code to generate any
-results included in an academic publication.
-Xin Yi, xiy525@mail.usask.ca, Feb 2016
+Yi, Xin, and Mark Eramian. "LBP-based segmentation of defocus blur." IEEE transactions on image processing 25.4 (2016): 1626-1638.
 
- 
+### Acknowlegements
+The alpha matting code comes from Levin, 2006:
 
+>A. Levin D. Lischinski and Y. Weiss. *A Closed Form Solution to Natural Image Matting*. 
+IEEE Conf. on Computer Vision and Pattern Recognition (CVPR), June 2006, New York.
 
+The multi-scale inference code was adopted form Jianping Shi, 2014:
 
+>Jianping Shi, Li Xu, Jiaya Jia. *Discriminative Blur Detection Features*.
+IEEE Conference on Computer Vision and Pattern Recognition, 2014. 
 
 
 
