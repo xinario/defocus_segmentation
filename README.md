@@ -1,6 +1,10 @@
 # LBP-Based Segmentation of Defocus Blur
+<img src='./images/video_example.gif' align="right" width="900px">
+<br>
+## Update2:
+Add a python implementation to compute the sharpness metric.
 
-## Update:
+## Update1:
 The blur maps for the 1000 images in the [blur segmentation dataset](http://www.cse.cuhk.edu.hk/%7Eleojia/projects/dblurdetect/dataset.html) produced by our algorithm can be found [here](https://1drv.ms/u/s!Aj4IQl4ug0_9hEANDaY7WjuOQkxW) for easy comparison.
 
 ##
@@ -11,6 +15,11 @@ This repo provides the code to reproduce our defocus segmentaion results  in our
 
 ### Prerequistites
 - Matlab 2016a
+
+If you want to try out the python script, you need
+
+- Python 3
+- Opencv 3 (pip install opencv-python)
 
 ### Getting Started
 - Clone this repo:
@@ -34,6 +43,11 @@ Compute the LBP-based sharpness measure using the mex version.
 4. Comment out line 14 and uncomment line 18, 19 in localSharpScoreLBP.m, then you are good to go.
 
 All the results reported in the paper were produced by the mex verison of LBP-based sharpness.
+```
+
+- To use python script
+```
+python lbpSharpness.py --input ./images/out_of_focus0080.JPG
 ```
 
 ### Citations
