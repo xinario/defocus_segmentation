@@ -1,6 +1,11 @@
-# LBP-Based Segmentation of Defocus Blur
-<img src='./images/video_example.gif' align="right" width="900px">
+<img src='./images/video_exampe.gif' align="right" width=900>
 <br>
+
+# LBP-Based Segmentation of Defocus Blur
+
+
+
+
 ## Update2:
 Add a python implementation to compute the sharpness metric.
 
